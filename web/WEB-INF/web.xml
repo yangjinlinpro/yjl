@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <!--<servlet>-->
+        <!--<description>This is the description of my J2EE component</description>-->
+        <!--<display-name>This is the display name of my J2EE component</display-name>-->
+        <!--<servlet-name>Hello</servlet-name>-->
+        <!--<servlet-class>com.web.test.controller.Hello</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet>-->
+        <!--<description>This is the description of my J2EE component</description>-->
+        <!--<display-name>This is the display name of my J2EE component</display-name>-->
+        <!--<servlet-name>Register</servlet-name>-->
+        <!--<servlet-class>com.web.test.controller.Register</servlet-class>-->
+    <!--</servlet>-->
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>Hello</servlet-name>-->
+        <!--<url-pattern>/hello</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>Register</servlet-name>-->
+        <!--<url-pattern>/register</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<welcome-file-list>-->
+        <!--<welcome-file>index.jsp</welcome-file>-->
+    <!--</welcome-file-list>-->
+<!--异步更新-->
+
+    <!--<servlet>-->
+        <!--<servlet-name>AsyncComplete</servlet-name>-->
+        <!--<servlet-class>com.servlet.async.AsyncCompleteServlet</servlet-class>-->
+        <!--<async-supported>true</async-supported>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>AsyncComplete</servlet-name>-->
+        <!--<url-pattern>/asyncComplete</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+
+
+
+    <!--<servlet>-->
+    <!--<servlet-name>sub</servlet-name>-->
+    <!--<servlet-class>com.RegUserinfoAction</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>sub</servlet-name>-->
+    <!--<url-pattern>/sub</url-pattern>-->
+    <!--</servlet-mapping>-->
+    <!--<servlet>-->
+    <!--<servlet-name>long</servlet-name>-->
+    <!--<servlet-class>com.LoginAction</servlet-class>-->
+    <!--</servlet>-->
+    <!--<servlet-mapping>-->
+    <!--<servlet-name>long</servlet-name>-->
+    <!--<url-pattern>/t</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <!--<welcome-file-list>-->
+    <!--<welcome-file>index.jsp</welcome-file>-->
+    <!--</welcome-file-list>-->
+
+    <filter>
+        <filter-name>UTF8Filter</filter-name>
+        <filter-class>com.yjl.filter.CharsetFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UTF8Filter</filter-name>
+        <url-pattern>*.jsp</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>UTF8Filter</filter-name>
+        <url-pattern>*.*</url-pattern>
+    </filter-mapping>
+    <filter-mapping>
+        <filter-name>UTF8Filter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <servlet>
+        <servlet-name>LoginAction</servlet-name>
+        <servlet-class>com.yjl.action.LoginAction</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>AddAdminAction</servlet-name>
+        <servlet-class>com.yjl.action.AddAdminAction</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DelAdminAction</servlet-name>
+        <servlet-class>com.yjl.action.DelAdminAction</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>ModAdminAction</servlet-name>
+        <servlet-class>com.yjl.action.ModAdminAction</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginAction</servlet-name>
+        <url-pattern>/LoginAction</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet-mapping>
+        <servlet-name>AddAdminAction</servlet-name>
+        <url-pattern>/AddAdminAction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DelAdminAction</servlet-name>
+        <url-pattern>/DelAdminAction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModAdminAction</servlet-name>
+        <url-pattern>/ModAdminAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddCheweiAction</servlet-name>
+        <servlet-class>com.yjl.action.AddCheweiAction</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DelCheweiAction</servlet-name>
+        <servlet-class>com.yjl.action.DelCheweiAction</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ModCheweiAction</servlet-name>
+        <servlet-class>com.yjl.action.ModCheweiAction</servlet-class>
+    </servlet>
+
+
+
+    <servlet-mapping>
+        <servlet-name>AddCheweiAction</servlet-name>
+        <url-pattern>/AddCheweiAction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModCheweiAction</servlet-name>
+        <url-pattern>/ModCheweiAction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DelCheweiAction</servlet-name>
+        <url-pattern>/DelCheweiAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddUserinfoAction</servlet-name>
+        <servlet-class>com.yjl.action.AddUserinfoAction</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DelUserinfoAction</servlet-name>
+        <servlet-class>com.yjl.action.DelUserinfoAction</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ModUserinfoAction</servlet-name>
+        <servlet-class>com.yjl.action.ModUserinfoAction</servlet-class>
+    </servlet>
+
+
+
+    <servlet-mapping>
+        <servlet-name>AddUserinfoAction</servlet-name>
+        <url-pattern>/AddUserinfoAction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModUserinfoAction</servlet-name>
+        <url-pattern>/ModUserinfoAction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DelUserinfoAction</servlet-name>
+        <url-pattern>/DelUserinfoAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ModFeiAction</servlet-name>
+        <servlet-class>com.yjl.action.ModFeiAction</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ModFeiAction</servlet-name>
+        <url-pattern>/ModFeiAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RegUserinfoAction</servlet-name>
+        <servlet-class>com.yjl.action.RegUserinfoAction</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegUserinfoAction</servlet-name>
+        <url-pattern>/RegUserinfoAction</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>YudingAction</servlet-name>
+        <servlet-class>com.yjl.action.YudingAction</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>YudingAction</servlet-name>
+        <url-pattern>/YudingAction</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ChongAction</servlet-name>
+        <servlet-class>com.yjl.action.ChongAction</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ChongAction</servlet-name>
+        <url-pattern>/ChongAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddCheAction</servlet-name>
+        <servlet-class>com.yjl.action.AddCheAction</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>DelCheAction</servlet-name>
+        <servlet-class>com.yjl.action.DelCheAction</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ModCheAction</servlet-name>
+        <servlet-class>com.yjl.action.ModCheAction</servlet-class>
+    </servlet>
+
+
+
+    <servlet-mapping>
+        <servlet-name>AddCheAction</servlet-name>
+        <url-pattern>/AddCheAction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ModCheAction</servlet-name>
+        <url-pattern>/ModCheAction</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DelCheAction</servlet-name>
+        <url-pattern>/DelCheAction</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>AddCfeiAction</servlet-name>
+        <servlet-class>com.yjl.action.AddCfeiAction</servlet-class>
+    </servlet>
+
+    <servlet>
+        <servlet-name>DelCfeiAction</servlet-name>
+        <servlet-class>com.yjl.action.DelCfeiAction</servlet-class>
+    </servlet>
+
+
+
+    <servlet-mapping>
+        <servlet-name>AddCfeiAction</servlet-name>
+        <url-pattern>/AddCfeiAction</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>DelCfeiAction</servlet-name>
+        <url-pattern>/DelCfeiAction</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+
+
+
+</web-app>

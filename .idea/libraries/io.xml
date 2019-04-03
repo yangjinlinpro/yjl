@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="io">
+    <CLASSES>
+      <root url="file://D:/java/包/commons-io-2.6/docs/org/apache/commons/io" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://D:/java/包/commons-io-2.6/docs/org/apache/commons/io" recursive="false" />
+  </library>
+</component>

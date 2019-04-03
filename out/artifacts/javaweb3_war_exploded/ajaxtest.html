@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX 登陆验证实例</title>
+</head>
+<body>
+<script language="JavaScript">
+    var request = null;
+    function test() {
+        //初始化
+        var code = document.all.code.value;
+        var name = document.all.name.value;
+        req = new ActiveXObject("Microsoft.XMLHTTP");
+        //设置属性，当后台处理完成后，回来调用myDeal()方法
+        req.onreadystatechange = myDeal;
+        //发出请求
+        req.open("GET","index.jsp?code="+code+"&name="+name,"false");
+        req.send(null);
+    }
+    function myDeal() {
+        if (req.readyState==4)
+        {
+            //接受服务端返回的数据
+            var ret = req.responseText;
+            //处理数据
+            document.all("myDiv").innerHTML=ret;
+        }
+    }
+</script>
+用户注册:<br>
+用户编号:<input type="text" name="code" onblur="test();">*<div id ="myDiv" name="myDiv"></div><br>
+用户名称:<input type="text" name="name"><br>
+<input type="button" value="注册" onclick="test();">
+</body>
+</html>
